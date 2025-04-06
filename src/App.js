@@ -1,25 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import CohortsPage from './components/Cohort/AllCohorts';
+import DegreesPage from './components/Degree/AllDegrees';
+import ModulesPage from './components/Module/AllModules';
+import SingleDegreePage from './components/Degree/SingleDegree';
+import SingleCohortPage from './components/Cohort/SingleCohort';
+import SingleModulePage from './components/Module/SingleModule';
+import SingleStudentPage from './components/Student/SingleStudent';
+import Navbar from './components/Other/Navbar';
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/degrees" element={<DegreesPage />} />
+        <Route path="/cohorts" element={<CohortsPage />} />
+        <Route path="/modules" element={<ModulesPage />} />
+        <Route path="/degrees/:id" element={<SingleDegreePage />} />
+        <Route path="/cohorts/:id" element={<SingleCohortPage />} /> 
+        <Route path="/modules/:id" element={<SingleModulePage />} />
+        <Route path="/students/:id" element={<SingleStudentPage />} />
+      </Routes>
+    </Router>
+  )
 }
 
 export default App;
