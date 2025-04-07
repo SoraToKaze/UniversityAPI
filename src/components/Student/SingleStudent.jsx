@@ -36,7 +36,7 @@ function SingleStudentPage(){
         let code = url.split("/")[url.split("/").length - 2];
 
         return (
-            <Button component={Link} to={`/cohorts/${code}`} sx={{textTransform: "none", p : 0}}>
+            <Button component={Link} to={`/modules/${code}`} sx={{textTransform: "none", p : 0}}>
                 {code}
             </Button>
         )

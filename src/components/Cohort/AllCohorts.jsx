@@ -30,7 +30,7 @@ function CohortsPage()
     if (loading) {
         return (
             <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
-               <img alt="Loading" src={`${process.env.PUBLIC_URL}/Firefly.gif`}></img>
+                <img alt="Loading" src={`${process.env.PUBLIC_URL}/Firefly.gif`}></img>
             </div>
         );
     }

@@ -1,4 +1,4 @@
-import { useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Container, List, ListItem, ListItemText, Divider, Typography, Button, Box } from '@mui/material';
 function DegreesPage()
@@ -29,7 +29,7 @@ function DegreesPage()
     if (loading) {
         return (
             <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
-               <img alt="Loading" src={`${process.env.PUBLIC_URL}/Firefly.gif`}></img>
+                <img alt="Loading" src={`${process.env.PUBLIC_URL}/Firefly.gif`}></img>
             </div>
         );
     }
